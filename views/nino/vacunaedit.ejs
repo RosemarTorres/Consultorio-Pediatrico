@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/esquemaVacunacion.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Esquema de Vacunación</title>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Formulario de Esquema de Vacunación</h1>
+
+    <form id='formulario' data-id='<%=data.id%>'>
+      <table>
+        <thead>
+          <tr>
+            <th>Esquema Vacunas</th>
+            <th>1<sup>a</sup> Dosis</th>
+            <th>2<sup>a</sup> Dosis</th>
+            <th>3<sup>a</sup> Dosis</th>
+            <th>Refuerzo</th>
+            <th>2<sup>do</sup> Refuerzo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.C.G. (Tuberculosis)</td>
+            <td><input type="text" name="bcg_dosis_1"value='<%=data.tuberculosis1%>'></td>
+            <td><input type="text" name="bcg_dosis_2"value='<%=data.tuberculosis2%>'></td>
+            <td><input type="text" name="bcg_dosis_3"value='<%=data.tuberculosis3%>'></td>
+            <td><input type="text" name="bcg_dosis_4"value='<%=data.tuberculosis4%>'></td>
+            <td><input type="text" name="bcg_dosis_5"value='<%=data.tuberculosis4%>'></td>
+          </tr>
+          <tr>
+            <td>Polio</td>
+            <td><input type="text" name="polio_dosis_1"value='<%=data.polio1%>'></td>
+            <td><input type="text" name="polio_dosis_2"value='<%=data.polio2%>'></td>
+            <td><input type="text" name="polio_dosis_3"value='<%=data.polio3%>'></td>
+            <td><input type="text" name="polio_dosis_4"value='<%=data.polio4%>'></td>
+            <td><input type="text" name="polio_dosis_5"value='<%=data.polio5%>'></td>
+          </tr>
+          <tr>
+            <td>C.P.T. Triple (Difteria - Tosferina - Tétanos)</td>
+            <td><input type="text" name="cpt_dosis_1"value='<%=data.triple1%>'></td>
+            <td><input type="text" name="cpt_dosis_2"value='<%=data.triple2%>'></td>
+            <td><input type="text" name="cpt_dosis_3"value='<%=data.triple3%>'></td>
+            <td><input type="text" name="cpt_dosis_4"value='<%=data.triple4%>'></td>
+            <td><input type="text" name="cpt_dosis_5"value='<%=data.triple5%>'></td>
+          </tr>
+          <tr>
+            <td>Hepatitis B</td>
+            <td><input type="text" name="hepatitis_b_dosis_1"value='<%=data.hepatitisB1%>'></td>
+            <td><input type="text" name="hepatitis_b_dosis_2"value='<%=data.hepatitisB2%>'></td>
+            <td><input type="text" name="hepatitis_b_dosis_3"value='<%=data.hepatitisB3%>'></td>
+            <td><input type="text" name="hepatitis_b_dosis_4"value='<%=data.hepatitisB4%>'></td>
+            <td><input type="text" name="hepatitis_b_dosis_5"value='<%=data.hepatitisB5%>'></td>
+          </tr>
+          <tr>
+            <td>Rotavirus</td>
+            <td><input type="text" name="rotavirus_dosis_1"value='<%=data.rotavirus1%>'></td>
+            <td><input type="text" name="rotavirus_dosis_2"value='<%=data.rotavirus2%>'></td>
+            <td><input type="text" name="rotavirus_dosis_3"value='<%=data.rotavirus3%>'></td>
+            <td><input type="text" name="rotavirus_dosis_4"value='<%=data.rotavirus4%>'></td>
+            <td><input type="text" name="rotavirus_dosis_5"value='<%=data.rotavirus5%>'></td>
+          </tr>
+          <tr>
+            <td>Neumococo</td>
+            <td><input type="text" name="neumococo_dosis_1"value='<%=data.neumococo1%>'></td>
+            <td><input type="text" name="neumococo_dosis_2"value='<%=data.neumococo2%>'></td>
+            <td><input type="text" name="neumococo_dosis_3"value='<%=data.neumococo3%>'></td>
+            <td><input type="text" name="neumococo_dosis_4"value='<%=data.neumococo4%>'></td>
+            <td><input type="text" name="neumococo_dosis_5"value='<%=data.neumococo5%>'></td>
+          </tr>
+          <tr>
+            <td>Trivalente (Sarampión - Rubéola - Parotiditis)</td>
+            <td><input type="text" name="trivalente_dosis_1"value='<%=data.trivalente1%>'></td>
+            <td><input type="text" name="trivalente_dosis_2"value='<%=data.trivalente2%>'></td>
+            <td><input type="text" name="trivalente_dosis_3"value='<%=data.trivalente3%>'></td>
+            <td><input type="text" name="trivalente_dosis_4"value='<%=data.trivalente4%>'></td>
+            <td><input type="text" name="trivalente_dosis_5"value='<%=data.trivalente5%>'></td>
+          </tr>
+          <tr>
+            <td>Fiebre Amarilla</td>
+            <td><input type="text" name="fiebre_amarilla_dosis_1"value='<%=data.fiebreAmarilla1%>'></td>
+            <td><input type="text" name="fiebre_amarilla_dosis_2"value='<%=data.fiebreAmarilla2%>'></td>
+            <td><input type="text" name="fiebre_amarilla_dosis_3"value='<%=data.fiebreAmarilla3%>'></td>
+            <td><input type="text" name="fiebre_amarilla_dosis_4"value='<%=data.fiebreAmarilla4%>'></td>
+            <td><input type="text" name="fiebre_amarilla_dosis_5"value='<%=data.fiebreAmarilla5%>'></td>
+          </tr>
+          <tr>
+            <td>Hepatitis A</td>
+            <td><input type="text" name="hepatitis_a_dosis_1"value='<%=data.hepatitisA1%>'></td>
+            <td><input type="text" name="hepatitis_a_dosis_2"value='<%=data.hepatitisA2%>'></td>
+            <td><input type="text" name="hepatitis_a_dosis_3"value='<%=data.hepatitisA3%>'></td>
+            <td><input type="text" name="hepatitis_a_dosis_4"value='<%=data.hepatitisA4%>'></td>
+            <td><input type="text" name="hepatitis_a_dosis_5"value='<%=data.hepatitisA5%>'></td>
+          </tr>
+          <tr>
+            <td>Anti Influenza</td>
+            <td><input type="text" name="anti_influenza_dosis_1"value='<%=data.antiInfluenza1%>'></td>
+            <td><input type="text" name="anti_influenza_dosis_2"value='<%=data.antiInfluenza2%>'></td>
+            <td><input type="text" name="anti_influenza_dosis_3"value='<%=data.antiInfluenza3%>'></td>
+            <td><input type="text" name="anti_influenza_dosis_4"value='<%=data.antiInfluenza4%>'></td>
+            <td><input type="text" name="anti_influenza_dosis_5"value='<%=data.antiInfluenza5%>'></td>
+          </tr>
+          <tr>
+            <td>Varicela</td>
+            <td><input type="text" name="varicela_dosis_1"value='<%=data.varicela1%>'></td>
+            <td><input type="text" name="varicela_dosis_2"value='<%=data.varicela2%>'></td>
+            <td><input type="text" name="varicela_dosis_3"value='<%=data.varicela3%>'></td>
+            <td><input type="text" name="varicela_dosis_4"value='<%=data.varicela4%>'></td>
+            <td><input type="text" name="varicela_dosis_5"value='<%=data.varicela5%>'></td>
+          </tr>
+          <tr>
+            <td>Toxoide Tetánico</td>
+            <td><input type="text" name="toxoide_tetanico_dosis_1"value='<%=data.toxoideTetánico1%>'></td>
+            <td><input type="text" name="toxoide_tetanico_dosis_2"value='<%=data.toxoideTetánico2%>'></td>
+            <td><input type="text" name="toxoide_tetanico_dosis_3"value='<%=data.toxoideTetánico3%>'></td>
+            <td><input type="text" name="toxoide_tetanico_dosis_4"value='<%=data.toxoideTetánico4%>'></td>
+            <td><input type="text" name="toxoide_tetanico_dosis_5"value='<%=data.toxoideTetánico5%>'></td>
+          </tr>
+          <tr>
+            <td>Pentavalente</td>
+            <td><input type="text" name="pentavalente_dosis_1"value='<%=data.pentavalente1%>'></td>
+            <td><input type="text" name="pentavalente_dosis_2"value='<%=data.pentavalente2%>'></td>
+            <td><input type="text" name="pentavalente_dosis_3"value='<%=data.pentavalente3%>'></td>
+            <td><input type="text" name="pentavalente_dosis_4"value='<%=data.pentavalente4%>'></td>
+            <td><input type="text" name="pentavalente_dosis_5"value='<%=data.pentavalente5%>'></td>
+          </tr>
+          <tr>
+            <td>Hexavalente</td>
+            <td><input type="text" name="hexavalente_dosis_1"value='<%=data.hexavalente1%>'></td>
+            <td><input type="text" name="hexavalente_dosis_2"value='<%=data.hexavalente2%>'></td>
+            <td><input type="text" name="hexavalente_dosis_3"value='<%=data.hexavalente3%>'></td>
+            <td><input type="text" name="hexavalente_dosis_4"value='<%=data.hexavalente4%>'></td>
+            <td><input type="text" name="hexavalente_dosis_5"value='<%=data.hexavalente5%>'></td>
+          </tr>
+          <tr>
+            <td>Otros</td>
+            <td><input type="text" name="otros_dosis_1"value='<%=data.otros1%>'></td>
+            <td><input type="text" name="otros_dosis_2"value='<%=data.otros2%>'></td>
+            <td><input type="text" name="otros_dosis_3"value='<%=data.otros3%>'></td>
+            <td><input type="text" name="otros_dosis_4"value='<%=data.otros4%>'></td>
+            <td><input type="text" name="otros_dosis_5"value='<%=data.otros5%>'></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button type="submit" class="button">Guardar</button>
+        <a type="submit" class="button"href="/verPerfil/<%=data.id%>">Volver</a>
+      </div>
+    </form>
+
+
+    <script type="text/javascript">
+      const formulario = document.getElementById('formulario');
+      const idPacientes = formulario.dataset.id;
+  
+      formulario.addEventListener('submit',event=>{
+      event.preventDefault();
+  
+       const data = new FormData(formulario);
+      
+      
+      
+       const tuberculosis1 = data.get('bcg_dosis_1');
+       const tuberculosis2 = data.get('bcg_dosis_2');
+       const tuberculosis3 = data.get('bcg_dosis_3');
+       const tuberculosis4 = data.get('bcg_dosis_4');
+       const tuberculosis5 = data.get('bcg_dosis_5');
+
+       const polio1 = data.get('polio_dosis_1');
+       const polio2 = data.get('polio_dosis_2');
+       const polio3 = data.get('polio_dosis_3');
+       const polio4 = data.get('polio_dosis_4');
+       const polio5 = data.get('polio_dosis_5');
+
+      const triple1 = data.get('cpt_dosis_1');
+      const triple2 = data.get('cpt_dosis_2');
+      const triple3 = data.get('cpt_dosis_3');
+      const triple4 = data.get('cpt_dosis_4');
+      const triple5 = data.get('cpt_dosis_5');
+
+      const hepatitisB1 = data.get('hepatitis_b_dosis_1');
+      const hepatitisB2 = data.get('hepatitis_b_dosis_2');
+      const hepatitisB3 = data.get('hepatitis_b_dosis_3');
+      const hepatitisB4 = data.get('hepatitis_b_dosis_4');
+      const hepatitisB5 = data.get('hepatitis_b_dosis_5');
+
+      const rotavirus1 = data.get('rotavirus_dosis_1');
+      const rotavirus2 = data.get('rotavirus_dosis_2');
+      const rotavirus3 = data.get('rotavirus_dosis_3');
+      const rotavirus4 = data.get('rotavirus_dosis_4');
+      const rotavirus5 = data.get('rotavirus_dosis_5');
+
+      const neumococo1 = data.get('neumococo_dosis_1');
+      const neumococo2 = data.get('neumococo_dosis_2');
+      const neumococo3 = data.get('neumococo_dosis_3');
+      const neumococo4 = data.get('neumococo_dosis_4');
+      const neumococo5 = data.get('neumococo_dosis_5');
+
+      const trivalente1 = data.get('trivalente_dosis_1');
+      const trivalente2 = data.get('trivalente_dosis_2');
+      const trivalente3 = data.get('trivalente_dosis_3');
+      const trivalente4 = data.get('trivalente_dosis_4');
+      const trivalente5 = data.get('trivalente_dosis_5');
+
+      const fiebreAmarilla1 = data.get('fiebre_amarilla_dosis_1');
+      const fiebreAmarilla2 = data.get('fiebre_amarilla_dosis_2');
+      const fiebreAmarilla3 = data.get('fiebre_amarilla_dosis_3');
+      const fiebreAmarilla4 = data.get('fiebre_amarilla_dosis_4');
+      const fiebreAmarilla5 = data.get('fiebre_amarilla_dosis_5');
+      
+      const hepatitisA1 = data.get('hepatitis_a_dosis_1');
+      const hepatitisA2 = data.get('hepatitis_a_dosis_2');
+      const hepatitisA3 = data.get('hepatitis_a_dosis_3');
+      const hepatitisA4 = data.get('hepatitis_a_dosis_4');
+      const hepatitisA5 = data.get('hepatitis_a_dosis_5');
+
+      const antiInfluenza1 = data.get('anti_influenza_dosis_1');
+      const antiInfluenza2 = data.get('anti_influenza_dosis_2');
+      const antiInfluenza3 = data.get('anti_influenza_dosis_3');
+      const antiInfluenza4 = data.get('anti_influenza_dosis_4');
+      const antiInfluenza5= data.get('anti_influenza_dosis_5');
+
+      const varicela1 = data.get('varicela_dosis_1');
+      const varicela2 = data.get('varicela_dosis_2');
+      const varicela3 = data.get('varicela_dosis_3');
+      const varicela4 = data.get('varicela_dosis_4');
+      const varicela5 = data.get('varicela_dosis_5');
+
+      const toxoideTetánico1 = data.get('toxoide_tetanico_dosis_1');
+      const toxoideTetánico2 = data.get('toxoide_tetanico_dosis_2');
+      const toxoideTetánico3 = data.get('toxoide_tetanico_dosis_3');
+      const toxoideTetánico4 = data.get('toxoide_tetanico_dosis_4');
+      const toxoideTetánico5 = data.get('toxoide_tetanico_dosis_5');
+
+      const pentavalente1 = data.get('pentavalente_dosis_1');
+      const pentavalente2 = data.get('pentavalente_dosis_2');
+      const pentavalente3 = data.get('pentavalente_dosis_3');
+      const pentavalente4 = data.get('pentavalente_dosis_4');
+      const pentavalente5 = data.get('pentavalente_dosis_5');
+
+      const hexavalente1 = data.get('hexavalente_dosis_1');
+      const hexavalente2 = data.get('hexavalente_dosis_2');
+      const hexavalente3 = data.get('hexavalente_dosis_3');
+      const hexavalente4 = data.get('hexavalente_dosis_4');
+      const hexavalente5 = data.get('hexavalente_dosis_5');
+      
+
+      const otros1 = data.get('otros_dosis_1');
+      const otros2 = data.get('otros_dosis_2');
+      const otros3 = data.get('otros_dosis_3');
+      const otros4 = data.get('otros_dosis_4');
+      const otros5 = data.get('otros_dosis_5');
+
+
+     
+
+      fetch('/editvacunasPost',{
+          method:'post',
+          headers:{
+              'Content-Type':'application/json'
+          },
+          body:JSON.stringify({tuberculosis1,tuberculosis2,tuberculosis3,tuberculosis4,tuberculosis5,
+            polio1,polio2,polio3,polio4,polio5,
+            triple1,triple2,triple3,triple4,triple5,
+            hepatitisB1,hepatitisB2,hepatitisB3,hepatitisB4,hepatitisB5,
+            rotavirus1,rotavirus2,rotavirus3,rotavirus4,rotavirus5,
+            neumococo1,neumococo2,neumococo3,neumococo4,neumococo5,
+            trivalente1,trivalente2,trivalente3,trivalente4,trivalente5,
+            fiebreAmarilla1,fiebreAmarilla2,fiebreAmarilla3,fiebreAmarilla4,fiebreAmarilla5,
+            hepatitisA1,hepatitisA2,hepatitisA3,hepatitisA4,hepatitisA5,
+            antiInfluenza1,antiInfluenza2,antiInfluenza3,antiInfluenza4,antiInfluenza5,
+            varicela1,varicela2,varicela3,varicela4,varicela5,
+            toxoideTetánico1,toxoideTetánico2,toxoideTetánico3,toxoideTetánico4,toxoideTetánico5,
+            pentavalente1,pentavalente2,pentavalente3,pentavalente4,pentavalente5,
+            hexavalente1,hexavalente2,hexavalente3,hexavalente4,hexavalente5,
+            otros1,otros2,otros3,otros4,otros5,idPacientes
+          })
+      })
+      .then(res=>res.json())
+      .then(res=>{
+          if(res.interruptor){
+           alert('Registro completado con exito');
+           setTimeout(()=>{
+           window.location.href="/getPacientes";
+           },2000);
+          }else if(res.discrepancia){
+           alert('La cedula del representante es incorrecta');
+          }else{
+           alert('Error de la capa 8 detectado <[+_+]>');
+          }
+      })
+      });
+  
+  
+     
+  
+  
+  </script>
+  </div>
+</body>
+</html>

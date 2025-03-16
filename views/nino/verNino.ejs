@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="./styles/constancia.css">
+            <link rel="stylesheet" href="./styles/ver.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        </head>
+
+        <title>Ver Paciente</title>
+        <header class="main-header">
+            <h1>Ver Paciente</h1>
+            <nav>
+                <ul>
+                    <li><a class="regresar" href="/home">Regresar</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+     
+     
+   
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100">
+                <table>
+                    <thead>
+
+                        <tr class="table100-head">
+                            <th class="column">Nombres</th>
+                            <th class="column">Apellidos</th>
+                            <th class="column">Edad</th>
+                            <th class="column">Sexo</th>
+                            <th class="column" colspan="2">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <% pacientes.forEach(paciente=>{ %>
+                            <tr>
+                    
+                              <td><%=paciente.nombres%></td>
+                              <td><%=paciente.apellidos%></td>
+                              <td><%=paciente.edad%></td>
+                              <td><%=paciente.sexo%></td>
+                              <td>
+                                <a href="/editarNino/<%=paciente.id%>" class="options edit">Editar</a>
+                                <a href="/verPerfil/<%=paciente.id%>" class="options ver">Ver Perfil</a>
+                              </td>
+                              
+                            </tr>
+                           <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Google fonts-->
+</head>
+<body>
+  
+  
+ 
+<div class="content-nav">
+  <img class="svg1"	  src="/img/svg/nino.png" alt="Descripción del SVG">
+        <ul class="navbar-nav ">
+            <div class="nav-item"><a class="nav-link" method="POST" href="/registerRepresentanteGet">Registrar</a></div>
+            <div class="nav-item"><a class="nav-link" method="POST" href="/register">Registrar Pacientes</a></div>
+            <div class="nav-item"><a class="nav-link" href="/getPacientes">Lista de Pacientes</a></div>
+        </ul>
+    
+
+</div>
+
+<div class="content-nav2">
+  <div class="nav-header">
+    <div class="close"><a class="close-btn" href="https://drive.google.com/file/d/1I7lssAoXqzLHjxGd3DKZaa8wOFE4WyhP/view?usp=drive_link">Ayuda</a> 
+      <img class="svg1" style=" width: 30px; height: 30px; padding-right: 30px;padding-top: 10px; " src="/img/svg/help.svg" alt="Descripción del SVG">
+    </div>
+    <div class="close"><a class="close-btn" href="/cerrarSession">Cerrar</a> 
+      <img class="svg1" style=" width: 30px; height: 30px; padding-right: 30px;padding-top: 10px; " src="/img/svg/close.svg" alt="Descripción del SVG">
+    </div>
+
+</div>
+<div class="content-center" >
+<div class="content-pacient">
+
+  <a  href="/getPacientes"><button  href="/getPacientes" class="ver">  Ver </button></a>
+ 
+<h2 class="text-nino">Número de Niños Atendidos:</h2>
+<div class="circle">
+
+  <h2 class="text-center"><%=data%></h2>
+</div>
+<div class='progress_graph'>
+  <div class='progress_graph__bar--1'></div>
+  <div class='progress_graph__bar--2'></div>
+  <div class='progress_graph__bar--3'></div>
+  <div class='progress_graph__bar--4'></div>
+</div>
+  
+
+</div>
+<div class="seach">
+  <h2 class="text-center">Buscar Pacientes</h2>
+<div class="content-seach">
+
+ <form id='formulario' action='/filtro' method='POST'>
+
+ <div class="search-container">
+  <input type="text"  name="buscar" placeholder="Search..." class="search-input inputSearch">
+
+  <button class="searchP search-btn " type="submit"></button>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+<!-- Masthead-->
+<!---<header class="masthead">
+    <div class="container"id="Buscar">
+        <div class="masthead-subheading">Bienvenido!</div>
+        <div class="masthead-heading text-uppercase">Buscar Paciente</div>
+        
+       <form id='formulario' action='/filtro' method='POST'>
+        <input class="inputSearch " type="search" name="buscar">
+       <button class="searchP" type="submit"></button>
+       </form>
+       </a>
+      </div>
+</header>---->
+<!-- Services-->
+
+<script src="../script.js" type="text/javascript">
+const Buscar = document.getElementById('Buscar');
+       Buscar.addEventListener('submit',event=>{
+        event.preventDefault();//detiene el comportamiento por defecto de un Buscar
+        const data = new FormData (Buscar);
+        const Buscar = data.get('buscar');
+   
+        fetch(`/buscarPost`,{
+            method:'post',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({Buscar})
+        })
+        .then(res=>res.json())
+        .then(res=>{
+            if(res.interruptor){
+              alert('Busqueda Exitosa');
+              setTimeout(()=>{
+                window.location.href='/getPacientes';
+              },0);
+            }else{
+            alert('No se encontro usuario');
+            setTimeout(()=>{
+                window.location.href='/home';
+              },0);
+            }
+        });
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>

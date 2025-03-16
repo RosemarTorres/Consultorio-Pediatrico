@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Paciente</title>
+    <link rel="stylesheet" href="/styles/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <% if (tabla === 'pacientes') { %>
+        
+    <h1>Perfil del Paciente</h1> 
+    
+    <div class="perfil-container">
+        <div class="avatar-container">
+            <img class="profile-avatar" src="/img/nino.jpg" alt="Avatar">
+        </div>
+
+        <h2>Datos Personales</h2>
+        <p><strong>Nombres: </strong><%= datos.nombres %></p>
+        <p><strong>Apellidos: </strong><%= datos.apellidos %></p>
+        <p><strong>Edad: </strong><%= datos.edad %></p>
+        <p><strong>Sexo: </strong><%= datos.sexo %></p>
+        <p><strong>Fecha de Nacimiento: </strong><%= datos.fechaNacimiento %></p>
+        <p><strong>Lugar de Nacimiento: </strong><%= datos.lugarNacimiento %></p>
+        <p><strong>Dirección: </strong><%= datos.direccion %></p>
+    </div>
+    <div class="perfil-container " id="espacio">
+        
+
+        <h2>Mi Desarrollo</h2>
+        <p><strong>Descripcion:</strong><%= datos.descripcion %></p>
+        <div class="center">
+        <a href="/editarNino/<%= datos.id %>" class="options edit">Editar</a>
+    </div>
+       
+    </div>
+
+    <div class="perfil-container" id="espacio">
+        <h2>Datos del Representante</h2>
+        <p><strong>Nombre y Apellido: </strong><%= datos.representante.nombres %> <%= datos.representante.apellidos %></p>
+        <p><strong>Edad: </strong><%= datos.representante.edad %></p>
+        <p><strong>Cédula: </strong><%= datos.representante.cedula %></p>
+        <p><strong>Sexo: </strong><%= datos.representante.sexo %></p>
+        <p><strong>Dirección: </strong><%= datos.representante.direccion %></p>
+        <p><strong>Teléfono: </strong><%= datos.representante.telefono %></p>
+        <p><strong>Teléfono de Emergencia: </strong><%= datos.representante.telefonoEmergencia %></p>
+        <div class="center">
+            <a href="/updateRepresentante/<%= datos.representante.id %>" class="options edit">Editar</a>
+        </div>
+    </div>
+
+    <div class="limiter">
+        <div class="perfil-container display">
+            <h2>Consultas</h2>
+            <div class="wrap-table100">
+                <div class="table100">
+                    <table class="styl">
+                        <thead >
+                            <tr class="table100-head">
+                                <th class="column">Evaluación</th>
+                                <th class="column">Peso</th>
+                                <th class="column">Fecha y Lugar</th>
+                                <th class="column"  colspan="2">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% datos.consultas.forEach(registro => { %>
+                                <tr>
+                                    <td><%= registro.evaluacion %></td>
+                                    <td><%= registro.peso %>kg</td>
+                                    <!-- Formatear la fecha aquí si es necesario -->
+                                    <td><%= new Date(registro.updatedAt).toLocaleString('es-VE', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) %></td>
+
+                                    <td>
+                                        <a href="/editconsulta/<%= registro.id %>" class="options edit">Editar</a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="father-container">
+        <div class="child-container">
+            <a href="/home">Volver a principal</a>
+            <a href="/addconsulta/<%= datos.id %>">Registrar consulta</a>
+            <a href="/vacunas/<%= datos.id %>">Tarjeta de Vacunas</a>
+            <a href="/editarvacuna/<%= datos.id %>">Editar Vacunas</a>
+        </div>
+    </div>
+
+    <% } else { %>
+        <!-- Mensaje si no hay pacientes -->
+        <h2>No se encontró información del paciente.</h2>
+    <% } %>
+
+</body>
+</html>

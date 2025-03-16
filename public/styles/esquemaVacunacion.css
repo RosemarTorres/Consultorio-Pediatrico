@@ -1,0 +1,106 @@
+
+:root {
+    --box-shadow:rgba(0, 0, 0, 0.1);
+    --color-h1:#333;
+    --border-color-th-td:#ddd;
+    --background-th: #f4f4f4;
+    --input-color: #ccc;
+    --button-color: #007BFF;
+    --blanco: #FFFFFF;
+    --negro: #061c15;
+    --azul: #218a96;
+    --rosado: #f390b8;
+    --azulClarito:#218a9640;
+    --rosaClaro: #dfab9e;
+    --cafe: #e8e8c5;
+    --marron: #6e3118;
+    --gris: #f8f3f3;
+    --grisOscuro: #8d8d8d;
+  }
+ 
+  .regresar{	
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid var(--blanco);
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    cursor: pointer;
+}
+.regresarP:hover{
+background: var(--azul);
+border: 2px solid var(--blanco);
+color: var(--blanco);
+}
+.regresarP{
+  color: var(--azul);
+    text-decoration: none;
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid var(--blanco);
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    cursor: pointer;
+
+}
+.regresar:hover{
+    background-color: var(--blanco);
+    color: var(--azul);
+    transition: 0.5s;
+}
+body {
+  font-family: 'Roboto Condensed';
+  padding: 20px;
+    background: var(--azulClarito) ;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--azul);
+    box-shadow: 0 4px 6px var(--box-shadow);
+  }
+  h1 {
+    text-align: center;
+    color: var(--blanco);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid  var(--border-color-th-td);
+    text-align: left;
+    padding: 8px;
+    color: var(--blanco);
+  }
+  th {
+    background-color: var(--rosado);
+    color:var(--blanco);
+  }
+  input{
+    width: 100%;
+    padding: 6px;
+    border:1px solid var(--input-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
